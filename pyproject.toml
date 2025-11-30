@@ -8,7 +8,8 @@ dependencies = [
     "pandas>=2.3.3",
     "altair>=6.0.0",
     "vega_datasets>=0.9.0",
-    "vl-convert-python"
+    "vl-convert-python>=1.8.0",
+    "datacommons-client>=2.1.4"
 ]
 
 [dependency-groups]
