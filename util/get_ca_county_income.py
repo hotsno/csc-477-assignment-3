@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 from datacommons_client import DataCommonsClient
 
 def get_ca_county_income():
@@ -24,7 +25,7 @@ def get_ca_county_income():
             })
         seen_counties.add(row.get('entity_name'))
 
-    output_file = 'ca_county_median_income.json'
+    output_file = Path(__file__).parent.parent / 'data' / 'ca_county_median_income.json'
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=4)
 
